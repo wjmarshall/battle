@@ -18,13 +18,6 @@ RSpec.describe Player do
     end
   end
 
-  describe "#attack" do
-    it "accepts and injures an instance of Player" do
-      expect(player_2).to receive(:injure)
-      player_1.attack(player_2)
-    end
-  end
-
   describe "#injure" do
     it "reduces the player's points by 10" do
       player_1.injure

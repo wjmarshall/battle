@@ -6,9 +6,9 @@ class Player
     @points = points
   end
 
-  def attack(opponent)
-    opponent.injure
-  end
+  # def attack(opponent)
+  #   opponent.injure
+  # end
 
   def injure
     @points -= 10
