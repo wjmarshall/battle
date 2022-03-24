@@ -10,8 +10,6 @@ class Battle < Sinatra::Base
   end
 
   get "/" do
-    "Hello Battle!"
-    "Testing infrastructure working!"
     erb(:index)
   end
 
@@ -28,6 +26,7 @@ class Battle < Sinatra::Base
 
   get "/attack" do
     $game.attack($game.player_2)
+    $game.switch_turns
     erb(:attack)
   end
 

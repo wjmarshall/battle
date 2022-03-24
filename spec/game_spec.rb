@@ -23,4 +23,18 @@ RSpec.describe Game do
       game.attack(player_2)
     end
   end
+
+  describe "#current_turn" do
+    it "returns the current turn (player 1 when initialized)" do
+      expect(game.current_turn).to eq(player_1)
+    end
+  end
+
+  describe "#switch_turns" do
+    it "switches the current turn between players" do
+      game.switch_turns
+      expect(game.current_turn).to eq(player_2)
+    end
+  end
+
 end
